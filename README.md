@@ -29,8 +29,6 @@
     如果使用托管服务，则修改websocket地址为该服务器的ip地址 ->  如ws://200.16.24.89:8080/ws
   
     修改完成后运行 python3 main.py
-  
-  
 4. **使用软件：**  
   ### 打开应用
     在浏览器中访问`host_ip/8080/templates/index.html`打开应用 

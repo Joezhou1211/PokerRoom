@@ -46,8 +46,11 @@
     使用底部的“给分”和“取分”按钮，可以增加或减少分数池中的分数。左上角显示当前分数池的总分，点击玩家列表可以看到所有玩家的当前分数
 
   <img width="1439" alt="image" src="https://github.com/Joezhou1211/PokerRoom/assets/121386280/f675827d-83fb-4f58-9f18-a85062704169">
+  
 <img width="1439" alt="image" src="https://github.com/Joezhou1211/PokerRoom/assets/121386280/a0f62dd0-1243-49be-bd53-a0cb8567d316">
+
 <img width="448" alt="image" src="https://github.com/Joezhou1211/PokerRoom/assets/121386280/a09c146d-60cc-45c1-950d-b9852cb5e3ea">
+
 <img width="448" alt="image" src="https://github.com/Joezhou1211/PokerRoom/assets/121386280/1effdb19-5ccf-4b4c-be01-978d0fa5fb46">
 
 

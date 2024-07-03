@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>游戏计分板</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <button id="toggle-players-list">玩家列表</button>
+        <div id="players-list-popup" style="display: none;">
+            <div id="players-list">
+            </div>
+        </div>
+        <div id="score-pool">分数池: <span class="highlight">0 </span>分</div>
+    </header>
+    <div id="system-messages"></div>
+    <div id="join-messages" ></div>
+    <footer>
+        <div class="button-container">
+            <button id="add-score">给分</button>
+            <button id="take-score">取分</button>
+        </div>
+    </footer>
+    <script src="/static/main.js"></script>
+</body>
+</html>

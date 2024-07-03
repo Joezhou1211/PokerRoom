@@ -1,0 +1,254 @@
+/* 现代化基础样式 */
+body, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body, html {
+  position: fixed; /* 固定文档的位置 */
+  overflow: hidden; /* 隐藏溢出的内容 */
+  width: 100%;
+  height: 100%;
+}
+
+/* 头部样式 */
+header {
+    width: 100%; /* 确保头部宽度与屏幕宽度一致 */
+    padding: 10px 10px 20px 10px; /* 底部填充覆盖玩家列表按钮 */
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    position: relative;
+    box-sizing: border-box; /* 确保padding不会影响宽度计算 */
+}
+
+/* 头部标题样式 */
+#score-pool{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 分数池数字高亮 */
+.highlight {
+    color: #ff1212;
+    font-weight: bold;
+}
+
+/* 消息框样式 */
+#system-messages {
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid black;
+    height: 50vh;
+    overflow-y: scroll;
+}
+
+#join-messages {
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid black;
+    height: 15vh;
+    overflow-y: scroll;
+    box-sizing: border-box; /* 确保padding不会影响高度计算 */
+}
+
+/* 底部按钮容器样式 */
+footer {
+    width: 100%;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ccc;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box; /* 确保padding不会影响宽度计算 */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 按钮样式 */
+button {
+    padding: 15px 30px; /* 增加按钮长度 */
+    font-size: 1em;
+    border: none;
+    color: white;
+    cursor: pointer;
+    flex-grow: 1; /* 让按钮填充可用空间 */
+    margin: 0 5px; /* 两边间隔 */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+
+
+/* 玩家列表弹窗样式 */
+#players-list-popup {
+    display: none;
+    position: fixed;
+    width: 80%;
+    max-width: 60vw; /* 限制最大宽度以适应不同屏幕 */
+    height: 55%; /* 增加高度比例 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 居中显示 */
+    background-color: #f1e0bb; /* 轻微的灰色背景 */
+    border: 1px solid #ddd; /* 更柔和的边框颜色 */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* 添加阴影以提升层次感 */
+    overflow-y: auto;
+    border-radius: 8px; /* 添加圆角 */
+    padding: 20px; /* 增加内边距 */
+    z-index: 1000;
+}
+
+/* 显示玩家列表的按钮样式 */
+#toggle-players-list {
+    position: absolute;
+    right: 10px;
+    top: 10px; /* 向上移动，确保按钮在header内 */
+    z-index: 1001; /* 确保按钮位于弹窗之上 */
+    padding: 7px 12px;
+    font-size: 0.8em;
+}
+
+/* 当弹窗被触发时显示 */
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* 玩家列表项目样式 */
+#players-list div {
+    padding: 10px;
+    margin-bottom: 5px; /* 添加间距以分隔玩家项目 */
+    background-color: #ffffff; /* 项目背景颜色 */
+    border: 1px solid #eee; /* 轻微边框以区分项目 */
+    border-radius: 5px; /* 圆角 */
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* 细微的阴影效果 */
+    transition: background-color 0.2s ease; /* 鼠标悬停时的背景色变化 */
+    overflow-y: auto;
+}
+
+
+
+/* 当弹窗被触发时的动画效果 */
+#players-list-popup {
+    animation: slideIn 0.5s ease-out forwards; /* 向上滑入动画 */
+    transform: translate(-50%, -60%); /* 开始状态稍微向上，以便于动画开始 */
+}
+
+/* 定义向上滑入动画 */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+
+
+/* 全局色彩和字体 */
+:root {
+    --primary-color: #ff7349; /* 主色调 */
+    --secondary-color: #c91717; /* 辅助色调 */
+    --success-color: #26d74e; /* 成功消息颜色 */
+    --danger-color: #c95eff; /* 错误或警告颜色 */
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* iOS优化字体 */
+}
+
+body, button {
+    font-family: var(--font-family);
+}
+
+/* 应用一个渐变背景 */
+body, html {
+    background: linear-gradient(to right, #ffe4c0 0%, #fff6e6 100%);
+    color: #333333; /* 深色文本 */
+}
+
+/* 调整头部样式，使其更加紧凑和现代 */
+header {
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+    backdrop-filter: blur(10px); /* 背景模糊效果 */
+    color: #333; /* 深色文本 */
+}
+
+
+/* 更新按钮样式 */
+button {
+    background-color: var(--primary-color);
+    border-radius: 20px; /* 圆角按钮 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+}
+
+button#take-score {
+    background-color: var(--danger-color);
+}
+
+/* 按钮:hover状态 */
+button:hover {
+    opacity: 0.9;
+}
+
+/* 按钮:active状态，模拟点击效果 */
+button:active {
+    transform: scale(0.95); /* 按钮缩小 */
+}
+
+/* 按钮恢复原状 */
+button:not(:active) {
+    transform: scale(1); /* 按钮恢复原大小 */
+}
+
+#system-messages, #join-messages {
+    scroll-behavior: smooth;
+    overflow-y: scroll; /* 确保始终显示滚动条 */
+    background-color: rgba(232, 230, 223, 0.98);
+}
+
+#system-messages div, #join-messages div {
+    text-align: left; /* 或者根据实际需求调整为 justify */
+    margin-bottom: 9px; /* 增加消息之间的间距 */
+    line-height: 1.5; /* 提高行高以增强可读性 */
+    padding: 4px 8px; /* 内边距提升文本的呼吸空间 */
+    background: #f8f8f8; /* 每条消息使用稍微区分的背景色 */
+    border-radius: 5px; /* 轻微的圆角 */
+    border: 1px solid #e0e0e0; /* 细边框增强结构 */
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.1); /* 轻微的阴影效果 */
+
+}
+
+#system-messages, #join-messages {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 轻微的阴影效果 */
+    border: 1px solid #ccc; /* 优化边框颜色 */
+    border-radius: 8px; /* 增加圆角 */
+}
+
+#system-messages div:empty, #join-messages div:empty {
+    display: none;
+}
+
+#system-messages {
+    position: relative;
+    /* 其他样式保持不变 */
+}
+

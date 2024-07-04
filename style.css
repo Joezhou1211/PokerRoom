@@ -11,21 +11,21 @@ body, button {
 }
 
 body, html {
-  position: fixed; /* 固定文档的位置 */
-  overflow: hidden; /* 隐藏溢出的内容 */
+  position: fixed; 
+  overflow: hidden; 
   width: 100%;
   height: 100%;
 }
 
 /* 头部样式 */
 header {
-    width: 100%; /* 确保头部宽度与屏幕宽度一致 */
-    padding: 10px 10px 20px 10px; /* 底部填充覆盖玩家列表按钮 */
+    width: 100%; 
+    padding: 10px 10px 20px 10px;
     background-color: #fff;
     border-bottom: 1px solid #ccc;
     text-align: left;
     position: relative;
-    box-sizing: border-box; /* 确保padding不会影响宽度计算 */
+    box-sizing: border-box; 
 }
 
 /* 头部标题样式 */
@@ -58,7 +58,7 @@ header {
     border: 1px solid black;
     height: 15vh;
     overflow-y: scroll;
-    box-sizing: border-box; /* 确保padding不会影响高度计算 */
+    box-sizing: border-box; 
 }
 
 /* 底部按钮容器样式 */
@@ -70,7 +70,7 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    box-sizing: border-box; /* 确保padding不会影响宽度计算 */
+    box-sizing: border-box; 
 }
 
 .button-container {
@@ -80,13 +80,13 @@ footer {
 
 /* 按钮样式 */
 button {
-    padding: 15px 30px; /* 增加按钮长度 */
+    padding: 15px 30px; 
     font-size: 1em;
     border: none;
     color: white;
     cursor: pointer;
-    flex-grow: 1; /* 让按钮填充可用空间 */
-    margin: 0 5px; /* 两边间隔 */
+    flex-grow: 1;
+    margin: 0 5px; 
     transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
@@ -97,17 +97,17 @@ button {
     display: none;
     position: fixed;
     width: 80%;
-    max-width: 60vw; /* 限制最大宽度以适应不同屏幕 */
-    height: 55%; /* 增加高度比例 */
+    max-width: 60vw; 
+    height: 55%; 
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* 居中显示 */
-    background-color: #f1e0bb; /* 轻微的灰色背景 */
-    border: 1px solid #ddd; /* 更柔和的边框颜色 */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* 添加阴影以提升层次感 */
+    transform: translate(-50%, -50%); 
+    background-color: #f1e0bb; 
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
     overflow-y: auto;
-    border-radius: 8px; /* 添加圆角 */
-    padding: 20px; /* 增加内边距 */
+    border-radius: 8px; 
+    padding: 20px;
     z-index: 1000;
 }
 
@@ -115,8 +115,8 @@ button {
 #toggle-players-list {
     position: absolute;
     right: 10px;
-    top: 10px; /* 向上移动，确保按钮在header内 */
-    z-index: 1001; /* 确保按钮位于弹窗之上 */
+    top: 10px; 
+    z-index: 1001; 
     padding: 7px 12px;
     font-size: 0.8em;
 }
@@ -134,12 +134,12 @@ button {
 /* 玩家列表项目样式 */
 #players-list div {
     padding: 10px;
-    margin-bottom: 5px; /* 添加间距以分隔玩家项目 */
-    background-color: #ffffff; /* 项目背景颜色 */
-    border: 1px solid #eee; /* 轻微边框以区分项目 */
-    border-radius: 5px; /* 圆角 */
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* 细微的阴影效果 */
-    transition: background-color 0.2s ease; /* 鼠标悬停时的背景色变化 */
+    margin-bottom: 5px; 
+    background-color: #ffffff;
+    border: 1px solid #eee; 
+    border-radius: 5px; 
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease; 
     overflow-y: auto;
 }
 
@@ -147,8 +147,8 @@ button {
 
 /* 当弹窗被触发时的动画效果 */
 #players-list-popup {
-    animation: slideIn 0.5s ease-out forwards; /* 向上滑入动画 */
-    transform: translate(-50%, -60%); /* 开始状态稍微向上，以便于动画开始 */
+    animation: slideIn 0.5s ease-out forwards;
+    transform: translate(-50%, -60%); 
 }
 
 /* 定义向上滑入动画 */
@@ -179,25 +179,25 @@ body, button {
     font-family: var(--font-family);
 }
 
-/* 应用一个渐变背景 */
+
 body, html {
     background: linear-gradient(to right, #ffe4c0 0%, #fff6e6 100%);
-    color: #333333; /* 深色文本 */
+    color: #333333;
 }
 
 /* 调整头部样式，使其更加紧凑和现代 */
 header {
-    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
-    backdrop-filter: blur(10px); /* 背景模糊效果 */
-    color: #333; /* 深色文本 */
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); 
+    color: #333; 
 }
 
 
 /* 更新按钮样式 */
 button {
     background-color: var(--primary-color);
-    border-radius: 20px; /* 圆角按钮 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+    border-radius: 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 button#take-score {
@@ -211,36 +211,36 @@ button:hover {
 
 /* 按钮:active状态，模拟点击效果 */
 button:active {
-    transform: scale(0.95); /* 按钮缩小 */
+    transform: scale(0.95); 
 }
 
 /* 按钮恢复原状 */
 button:not(:active) {
-    transform: scale(1); /* 按钮恢复原大小 */
+    transform: scale(1);
 }
 
 #system-messages, #join-messages {
     scroll-behavior: smooth;
-    overflow-y: scroll; /* 确保始终显示滚动条 */
+    overflow-y: scroll; 
     background-color: rgba(232, 230, 223, 0.98);
 }
 
 #system-messages div, #join-messages div {
-    text-align: left; /* 或者根据实际需求调整为 justify */
-    margin-bottom: 9px; /* 增加消息之间的间距 */
-    line-height: 1.5; /* 提高行高以增强可读性 */
-    padding: 4px 8px; /* 内边距提升文本的呼吸空间 */
-    background: #f8f8f8; /* 每条消息使用稍微区分的背景色 */
-    border-radius: 5px; /* 轻微的圆角 */
-    border: 1px solid #e0e0e0; /* 细边框增强结构 */
-    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.1); /* 轻微的阴影效果 */
+    text-align: left;
+    margin-bottom: 9px; 
+    line-height: 1.5; 
+    padding: 4px 8px; 
+    background: #f8f8f8; 
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.1); 
 
 }
 
 #system-messages, #join-messages {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 轻微的阴影效果 */
-    border: 1px solid #ccc; /* 优化边框颜色 */
-    border-radius: 8px; /* 增加圆角 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+    border-radius: 8px; 
 }
 
 #system-messages div:empty, #join-messages div:empty {
@@ -249,6 +249,5 @@ button:not(:active) {
 
 #system-messages {
     position: relative;
-    /* 其他样式保持不变 */
 }
 
